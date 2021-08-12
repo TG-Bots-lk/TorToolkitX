@@ -335,7 +335,7 @@ async def upload_a_file(
         if dis_thumb is False or dis_thumb is None:
             thumb_path = user_db.get_thumbnail(user_msg.sender_id)
             if not thumb_path:
-                thumb_path = None
+                thumb_path = get_val("DEF_THUMB")
 
     try:
         if get_val("FAST_UPLOAD"):
