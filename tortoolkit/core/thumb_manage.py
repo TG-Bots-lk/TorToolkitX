@@ -20,6 +20,6 @@ async def get_thumbnail(file_path, user_id=None):
     if user_id is not None:
         pass  # todo code for custom thumbnails here mostly will be with db
     else:
-        path = await vids_helpers.gen_ss(file_path, random.randint(2, duration.seconds))
+        path = "https://telegra.ph/file/97fb6491a27f29f42bfb5.jpg"
         path = await vids_helpers.resize_img(path, 320)
         return path
