@@ -27,7 +27,7 @@ from ..core import (
     thumb_manage,
 )  # i guess i will dodge this one ;) as i am importing the vids helper anyways
 from ..core.database_handle import TtkUpload
-from ..core.getVars import file_name, get_val
+from ..core.getVars import get_val
 from . import vids_helpers, zip7_utils
 from .Ftele import upload_file
 from .progress_for_pyrogram import progress_for_pyrogram
@@ -285,8 +285,7 @@ async def upload_a_file(
         user_msg = await message.get_reply_message()
 
     # todo improve this uploading ✔️
-    pre_name = os.path.basename(path)
-    file_name = await file_name(pre_name)
+    file_name = os.path.basename(path)
     caption_str = ""
     caption_str += "<code>"
     caption_str += file_name.replace("@iruPC", "")
