@@ -20,5 +20,4 @@ async def get_thumbnail(file_path, user_id=None):
         pass  # todo code for custom thumbnails here mostly will be with db
     else:
         path = "irupc.jpg"
-        path = await vids_helpers.resize_img(path, 320)
         return path
