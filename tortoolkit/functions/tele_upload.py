@@ -286,7 +286,9 @@ async def upload_a_file(
 
     # todo improve this uploading ✔️
     file_name = os.path.basename(path)
-    file_name = file_name.replace("@iruPC.net_", "iruPC.net_").replace("iruPC.net_", "@iruPC.net_")
+    file_name = file_name.replace("@iruPC.net_", "iruPC.net_").replace(
+        "iruPC.net_", "@iruPC.net_"
+    )
     caption_str = ""
     caption_str += "<code>"
     caption_str += file_name.replace("@iruPC", "")
