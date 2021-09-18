@@ -861,7 +861,6 @@ async def set_thumb_cmd(e):
         im = Image.open(value)
         im.convert("RGB").save(value, "JPEG")
         im = Image.open(value)
-        im.thumbnail((320, 320), Image.ANTIALIAS)
         im.save(value, "JPEG")
         with open(value, "rb") as fi:
             data = fi.read()
