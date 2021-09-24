@@ -124,18 +124,22 @@ async def rclone_upload(
         folder_link = f"https://drive.google.com/folderview?id={gid[0]}"
 
         buttons = []
-        buttons.append([KeyboardButtonUrl("Drive URL", folder_link)])
+        buttons.append([KeyboardButtonUrl("☁️ Drive URL ☁️", folder_link)])
         gd_index = get_val("GD_INDEX_URL")
         if gd_index:
             index_link = "{}/{}/".format(gd_index.strip("/"), gid[1])
             index_link = requote_uri(index_link)
             torlog.info("index link " + str(index_link))
-            buttons.append([KeyboardButtonUrl("Index URL", index_link)])
+            buttons.append([KeyboardButtonUrl("🔥 Index URL 🔥", index_link)])
+            last_char = index_link[-1]
+            if last_char != "/":
+                stream_link = index_link+"?a=view"
+                buttons.append([KeyboardButtonUrl("⏯ Streaming URL ⏸", stream_link)])
 
         ul_size = calculate_size(path)
         transfer[0] += ul_size
         ul_size = Human_Format.human_readable_bytes(ul_size)
-        txtmsg = "<a href='tg://user?id={}'>Done</a>\n#uploads\nUploaded Size:- {}\nUPLOADED FOLDER :-<code>{}</code>\nTo Drive.".format(
+        txtmsg = "<a href='tg://user?id={}'>🌀 Done</a>  #uploads\n☞ 📦 Size: {}\n☞ 📂 Filename:<code>{}</code>\n💠To Google Drive.\n\n <a href='https://t.me/IruPC/1387'>🌾 Read More About ⏯ Streaming URL ⏸</a>".format(
             omsg.sender_id, ul_size, os.path.basename(path)
         )
 
@@ -193,18 +197,22 @@ async def rclone_upload(
         buttons = []
 
         file_link = f"https://drive.google.com/file/d/{gid[0]}/view"
-        buttons.append([KeyboardButtonUrl("Drive URL", file_link)])
+        buttons.append([KeyboardButtonUrl("☁️ Drive URL ☁️", file_link)])
         gd_index = get_val("GD_INDEX_URL")
         if gd_index:
             index_link = "{}/{}".format(gd_index.strip("/"), gid[1])
             index_link = requote_uri(index_link)
             torlog.info("index link " + str(index_link))
-            buttons.append([KeyboardButtonUrl("Index URL", index_link)])
+            buttons.append([KeyboardButtonUrl("🔥 Index URL 🔥", index_link)])
+            last_char = index_link[-1]
+            if last_char != "/":
+                stream_link = index_link+"?a=view"
+                buttons.append([KeyboardButtonUrl("⏯ Streaming URL ⏸", stream_link)])
 
         ul_size = calculate_size(path)
         transfer[0] += ul_size
         ul_size = Human_Format.human_readable_bytes(ul_size)
-        txtmsg = "<a href='tg://user?id={}'>Done</a>\n#uploads\nUploaded Size:- {}\nUPLOADED FILE :-<code>{}</code>\nTo Drive.".format(
+        txtmsg = "<a href='tg://user?id={}'>🌀 Done</a>  #uploads\n☞ 📦 Size: {}\n☞ 📂 Filename:<code>{}</code>\n💠To Google Drive.\n\n <a href='https://t.me/IruPC/1387'>🌾 Read More About ⏯ Streaming URL ⏸</a>".format(
             omsg.sender_id, ul_size, os.path.basename(path)
         )
 
