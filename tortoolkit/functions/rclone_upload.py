@@ -133,7 +133,7 @@ async def rclone_upload(
             buttons.append([KeyboardButtonUrl("🔥 Index URL 🔥", index_link)])
             last_char = index_link[-1]
             if last_char != "/":
-                stream_link = index_link+"?a=view"
+                stream_link = index_link + "?a=view"
                 buttons.append([KeyboardButtonUrl("⏯ Streaming URL ⏸", stream_link)])
 
         ul_size = calculate_size(path)
@@ -206,7 +206,7 @@ async def rclone_upload(
             buttons.append([KeyboardButtonUrl("🔥 Index URL 🔥", index_link)])
             last_char = index_link[-1]
             if last_char != "/":
-                stream_link = index_link+"?a=view"
+                stream_link = index_link + "?a=view"
                 buttons.append([KeyboardButtonUrl("⏯ Streaming URL ⏸", stream_link)])
 
         ul_size = calculate_size(path)
