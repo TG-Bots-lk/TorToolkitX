@@ -143,9 +143,7 @@ async def rclone_upload(
             omsg.sender_id, ul_size, os.path.basename(path)
         )
 
-        await omsg.reply(
-            txtmsg, buttons=buttons, parse_mode="html"
-        )
+        await omsg.reply(txtmsg, buttons=buttons, parse_mode="html")
         await msg.delete()
 
     else:
@@ -218,9 +216,7 @@ async def rclone_upload(
             omsg.sender_id, ul_size, os.path.basename(path)
         )
 
-        await omsg.reply(
-            txtmsg, buttons=buttons, parse_mode="html"
-        )
+        await omsg.reply(txtmsg, buttons=buttons, parse_mode="html")
         await msg.delete()
 
     upload_db.deregister_upload(message.chat_id, message.id)
