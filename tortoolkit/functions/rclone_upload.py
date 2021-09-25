@@ -139,12 +139,12 @@ async def rclone_upload(
         ul_size = calculate_size(path)
         transfer[0] += ul_size
         ul_size = Human_Format.human_readable_bytes(ul_size)
-        txtmsg = "<a href='tg://user?id={}'>☞ Done</a>  #uploads\n\n☞ 📦 Size: {}\n☞ 📂 Filename:<code>{}</code>\n\n💠To Google Drive.\n\n <a href='https://t.me/IruPC/1387'>🌾 Read More About ⏯ Streaming URL ⏸</a>".format(
+        txtmsg = "<a href='tg://user?id={}'>☞ Done</a>  #uploads\n\n☞ 📦 Size: {}\n☞ 📂 Filename:<code>{}</code>\n\n💠To Google Drive.\n\n <a href='https://t.me/IruPC/1387'>🌾 Read More About ⏯ Streaming URL</a> <a href='https://t.me/IruPC'>⏸</a>".format(
             omsg.sender_id, ul_size, os.path.basename(path)
         )
 
         await omsg.reply(
-            txtmsg, buttons=buttons, parse_mode="html", disable_web_page_preview=True
+            txtmsg, buttons=buttons, parse_mode="html"
         )
         await msg.delete()
 
@@ -214,12 +214,12 @@ async def rclone_upload(
         ul_size = calculate_size(path)
         transfer[0] += ul_size
         ul_size = Human_Format.human_readable_bytes(ul_size)
-        txtmsg = "<a href='tg://user?id={}'>☞ Done</a>  #uploads\n\n☞ 📦 Size: {}\n☞ 📂 Filename:<code>{}</code>\n\n💠To Google Drive.\n\n <a href='https://t.me/IruPC/1387'>🌾 Read More About ⏯ Streaming URL ⏸</a>".format(
+        txtmsg = "<a href='tg://user?id={}'>☞ Done</a>  #uploads\n\n☞ 📦 Size: {}\n☞ 📂 Filename:<code>{}</code>\n\n💠To Google Drive.\n\n <a href='https://t.me/IruPC/1387'>🌾 Read More About ⏯ Streaming URL</a> <a href='https://t.me/IruPC'>⏸</a>".format(
             omsg.sender_id, ul_size, os.path.basename(path)
         )
 
         await omsg.reply(
-            txtmsg, buttons=buttons, parse_mode="html", disable_web_page_preview=True
+            txtmsg, buttons=buttons, parse_mode="html"
         )
         await msg.delete()
 
