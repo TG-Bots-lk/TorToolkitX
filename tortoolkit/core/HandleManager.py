@@ -878,7 +878,7 @@ async def set_thumb_cmd(e):
 
     user_db.set_var("DISABLE_THUMBNAIL", False, str(e.sender_id))
     await e.reply(
-        "Thumbnail set. try using /usettings to get more control. Can be used in private too."
+        "Thumbnail set. try using /tusettings to get more control. Can be used in private too."
     )
 
 
