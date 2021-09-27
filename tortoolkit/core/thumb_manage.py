@@ -5,7 +5,9 @@
 
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
+
 from .. import user_db
+
 
 async def get_thumbnail(file_path, user_id=None):
     metadata = extractMetadata(createParser(file_path))
